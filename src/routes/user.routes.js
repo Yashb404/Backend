@@ -30,7 +30,7 @@ router.route("/register").post(
     router.route("/change-password").post(verifyJWT,changeCurrentUserPassword)
     
     router.route("/cover-image").patch(verifyJWT,upload.single(
-        "/coverImage"
+        "coverImage"
     ),
     updateUserCoverImage)
     router.route("/c/:username").get(verifyJWT,getUserChannelProfile)
